@@ -1,6 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended"
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/\\.html?$/"],
+      "matchStrings": [
+        "https://assets.ubuntu.com/v1/vanilla[_-]framework[_-]version[_-](?<currentValue>\\d+[_\\.]\\d+[_\\.]\\d+)[_\\.]min\\.css"
+      ],
+      "datasourceTemplate": "github-releases",
+      "packageNameTemplate": "canonical/vanilla-framework",
+      "versioningTemplate": "semver",
+      "extractVersionTemplate": "^v?(?<version>\\d+[_\\.]\\d+[_\\.]\\d+)$",
+      "autoReplaceStringTemplate": "https://assets.ubuntu.com/v1/vanilla_framework_version_{{ newMajor }}_{{ newMinor }}_{{ newPatch }}_min.css"
+    }
   ]
 }
