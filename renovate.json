@@ -11,7 +11,7 @@
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
-      "versioning": "semver",
+      "versioningTemplate": "semver",
       "autoReplaceStringTemplate": "https://assets.ubuntu.com/v1/vanilla_framework_version_{{{ newMajor }}}_{{{ newMinor }}}_{{{ newPatch }}}_min.css"
     }
   ]
