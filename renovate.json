@@ -6,7 +6,7 @@
       "customType": "regex",
       "managerFilePatterns": ["/\\.py$/"],
       "matchStrings": [
-        " (?<currentValue>[^ ]+) +# renovate: vanilla-framework-latest"
+        "[\"']?(?<currentValue>[^ ]+)[\"']? +# renovate: vanilla-framework-latest"
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
