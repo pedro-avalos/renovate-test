@@ -6,11 +6,12 @@
       "customType": "regex",
       "managerFilePatterns": ["/\\.html?$/"],
       "matchStrings": [
-        "https://assets.ubuntu.com/v1/vanilla[_-]framework[_-]version[_-](?<currentValue>v?\\d+[_\\.]\\d+[_\\.]\\d+)[_\\.]min\\.css"
+        "https://assets.ubuntu.com/v1/vanilla[_-]framework[_-]version[_-](?<currentValue>\\d+[_\\.]\\d+[_\\.]\\d+)[_\\.]min\\.css"
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
-      "versioningTemplate": "regex:v?(?<major>\\d+)[\\._](?<minor>\\d+)[\\._](?<patch>\\d+)",
+      "extractVersionTemplate": "{{ currentValue.replace(/_/g, '.') }}",
+      "versioningTemplate": "semver",
       "autoReplaceStringTemplate": "https://assets.ubuntu.com/v1/vanilla_framework_version_{{ newMajor }}_{{ newMinor }}_{{ newPatch }}_min.css"
     }
   ]
