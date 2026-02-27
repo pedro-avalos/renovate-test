@@ -7,7 +7,7 @@
       "managerFilePatterns": ["/\\.html?$/"],
       "matchStrings": [
         "https://assets\\.ubuntu\\.com/v1/vanilla-framework-version-(?<currentValue>\\d+\\.\\d+\\.\\d+)\\.min\\.css",
-        "https://assets\\.ubuntu\\.com/v1/vanilla_framework_version_(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)_min\\.css"
+        "https://assets\\.ubuntu\\.com/v1/vanilla_framework_version_(?<currentValue>\\d+_\\d+_\\d+)_min\\.css"
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
