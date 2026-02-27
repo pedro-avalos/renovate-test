@@ -10,7 +10,7 @@
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
-      "versioningTemplate": "regex:^v?(?<version>\\d+\\.\\d+\\.\\d+)$"
+      "versioningTemplate": "regex:^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
     }
   ]
 }
