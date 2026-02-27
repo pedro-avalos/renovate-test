@@ -10,8 +10,7 @@
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
-      "versioningTemplate": "semver",
-      "extractVersionTemplate": "^v?(?<version>\\d+[_\\.]\\d+[_\\.]\\d+)$",
+      "versioningTemplate": "regex:v?(?<major>\\d+)[\\._](?<minor>\\d+)[\\._](?<patch>\\d+)",
       "autoReplaceStringTemplate": "https://assets.ubuntu.com/v1/vanilla_framework_version_{{ newMajor }}_{{ newMinor }}_{{ newPatch }}_min.css"
     }
   ]
