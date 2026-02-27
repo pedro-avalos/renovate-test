@@ -10,7 +10,7 @@
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "regex:^v?(?<version>\\d+\\.\\d+\\.\\d+)$"
     }
   ]
 }
