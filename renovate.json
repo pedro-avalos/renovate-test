@@ -1,6 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "matchDatasources": ["github-releases"],
+      "matchPackageNames": ["canonical/vanilla-framework"],
+      "groupName": "Vanilla Framework",
+      "matchCurrentVersion": "regex:^(?<major>\\d+)[._](?<minor>\\d+)[._](?<patch>\\d+)$"
+    }
+  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -11,7 +19,6 @@
       ],
       "datasourceTemplate": "github-releases",
       "packageNameTemplate": "canonical/vanilla-framework",
-      "currentValueTemplate": "{{{ currentValue.replace(/_/g, '.') }}}",
       "versioningTemplate": "regex:^(?<major>\\d+)[._](?<minor>\\d+)[._](?<patch>\\d+)$",
       "autoReplaceStringTemplate": "https://assets.ubuntu.com/v1/vanilla_framework_version_{{{ newMajor }}}_{{{ newMinor }}}_{{{ newPatch }}}_min.css"
     }
